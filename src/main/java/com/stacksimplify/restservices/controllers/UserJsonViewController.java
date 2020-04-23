@@ -15,7 +15,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.stacksimplify.restservices.entities.User;
-import com.stacksimplify.restservices.entities.Views;
+import com.stacksimplify.restservices.entities.views.Views;
 import com.stacksimplify.restservices.exceptions.UserNotFoundException;
 import com.stacksimplify.restservices.services.UserService;
 

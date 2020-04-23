@@ -1,4 +1,4 @@
-package com.stacksimplify.restservices.entities;
+package com.stacksimplify.restservices.entities.views;
 
 public class Views {
 	

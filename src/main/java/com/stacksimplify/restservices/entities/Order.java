@@ -11,6 +11,7 @@ import org.springframework.hateoas.RepresentationModel;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
+import com.stacksimplify.restservices.entities.views.Views;
 
 @Entity
 @Table(name="orders")
