@@ -14,7 +14,6 @@ import com.stacksimplify.restservices.entities.Order;
 import com.stacksimplify.restservices.entities.User;
 import com.stacksimplify.restservices.exceptions.OrderNotFoundException;
 import com.stacksimplify.restservices.exceptions.UserNameNotFoundException;
-import com.stacksimplify.restservices.repositories.OrderRepository;
 import com.stacksimplify.restservices.repositories.UserRepository;
 
 @RestController
@@ -23,9 +22,6 @@ public class OrderHateoasController {
 	
 	@Autowired
 	private UserRepository userRepository;
-	
-	@Autowired
-	private OrderRepository orderRepository;
 	
 	@GetMapping("/{userid}/orders")
 	public CollectionModel<Order> getAllOrders(@PathVariable Long userid) throws UserNameNotFoundException {
