@@ -2,16 +2,7 @@ package com.stacksimplify.restservices.dtos;
 
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
-
-import com.fasterxml.jackson.annotation.JsonView;
 import com.stacksimplify.restservices.entities.Order;
-import com.stacksimplify.restservices.entities.Views;
 
 public class UserDtoV1 {
 
