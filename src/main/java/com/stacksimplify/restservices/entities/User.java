@@ -15,26 +15,33 @@ import org.springframework.hateoas.RepresentationModel;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 //import com.fasterxml.jackson.annotation.JsonIgnore;
 //import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@ApiModel(description="This model is to create a user")
 @Entity
 @Table(name="user")
 //@JsonIgnoreProperties({"firstname", "lastname"}) -- Static Filtering JsonIgnore
 // @JsonFilter(value="userfilter") -- Used for MAppingJacksonValue filtering section
 public class User extends RepresentationModel<User> {
 
+	@ApiModelProperty(notes="Auto generated unique id", required=true, position=1)
 	@Id
 	@GeneratedValue 
 	@JsonView({Views.External.class, Views.Internal.class})
 	private Long id;
 	
+	@ApiModelProperty(notes="Username should be in format flname", example="mvas", required=false, position=2)
+	@Size(min=2, max=50, message="Username should have at least 2 characters.")
 	@NotEmpty(message="Username is a Mandatory field. Please provide a username.")
 	@Column(name="USER_NAME", length=50, nullable=false, unique=true)
 	@JsonView({Views.External.class, Views.Internal.class})
 	private String username;
 	
-	@Size(min=2, message="FirstName should have at least 2 characters.")
+	@Size(min=2, max=50, message="FirstName should have at least 2 characters.")
 	@Column(name="FIRST_NAME", length=50, nullable=false)
 	@JsonView({Views.External.class, Views.Internal.class})
 	private String firstname;

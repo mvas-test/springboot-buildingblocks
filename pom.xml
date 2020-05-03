@@ -13,7 +13,7 @@
 	<artifactId>springboot-buildingblocks</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springboot-buildingblocks</name>
-	
+
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -88,6 +88,33 @@
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-bean-validators</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+<!--  swagger dependency use spring-plugin-core with version 1.2.0.RELEASE
+	  see: https://stackoverflow.com/questions/58431876/spring-boot-2-2-0-spring-hateoas-startup-issue
+	  
+		<dependency>
+			<groupId>org.springframework.plugin</groupId>
+			<artifactId>spring-plugin-core</artifactId>
+			<version>1.2.0.RELEASE</version>
+		</dependency>
+-->
 	</dependencies>
 
 	<build>
