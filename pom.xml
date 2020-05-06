@@ -119,10 +119,23 @@
 			<version>2.2.2</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-core -->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-core</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-jmx -->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-jmx</artifactId>
+		</dependency>
+
 		<!-- swagger dependency use spring-plugin-core with version 1.2.0.RELEASE 
 			see: https://stackoverflow.com/questions/58431876/spring-boot-2-2-0-spring-hateoas-startup-issue 
 			<dependency> <groupId>org.springframework.plugin</groupId> <artifactId>spring-plugin-core</artifactId> 
 			<version>1.2.0.RELEASE</version> </dependency> -->
+
 	</dependencies>
 
 	<build>
